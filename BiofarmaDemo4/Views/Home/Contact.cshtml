@@ -1,0 +1,79 @@
+﻿@model Person
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<script type="text/javascript">
+    function addPerson() {
+        var data = $("#personForm").serialize();
+        alert(data);
+        $.ajax({
+            type: 'POST',
+            url: '/Home/CreatePerson',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            data: data,
+            success: function (result) {
+                alert('Post OK');
+                console.log(result);
+            },
+            error: function () {
+                alert('POST Failed');
+                console.log('Failed ');
+            }
+        })
+    }
+
+</script>
+
+<h4>Person</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form id="personForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Surname" class="control-label"></label>
+                <input asp-for="Surname" class="form-control" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <select name="City" class="form-control" asp-for="City">
+                    <option value="0">------</option>
+                    <option value="1">Adana</option>
+                    <option value="2">Adıyaman</option>
+                    <option value="3">Afyonkarahisar</option>
+                    <option value="4">Ağrı</option>
+                    <option value="5">Amasya</option>
+                    <option value="6">Ankara</option>
+                    </select>
+                    <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" onclick="addPerson()">Ajax Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

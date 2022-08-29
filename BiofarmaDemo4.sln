@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiofarmaDemo4", "BiofarmaDemo4\BiofarmaDemo4.csproj", "{464C99F9-F780-430A-A98F-24C2B90AD83A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{464C99F9-F780-430A-A98F-24C2B90AD83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464C99F9-F780-430A-A98F-24C2B90AD83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464C99F9-F780-430A-A98F-24C2B90AD83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464C99F9-F780-430A-A98F-24C2B90AD83A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD552B94-CC06-4C0F-B41A-3891FF507D28}
+	EndGlobalSection
+EndGlobal
